@@ -52,6 +52,7 @@ public class QuickAction extends PopupWindows implements OnDismissListener {
     
     public static final int HORIZONTAL = 0;
     public static final int VERTICAL = 1;
+    public static final int BLUR_VERTICAL = 2;
     
     public static final int ANIM_GROW_FROM_LEFT = 1;
 	public static final int ANIM_GROW_FROM_RIGHT = 2;
@@ -83,8 +84,10 @@ public class QuickAction extends PopupWindows implements OnDismissListener {
 
         if (mOrientation == HORIZONTAL) {
             setRootViewId(R.layout.popup_horizontal);
+        } else if(mOrientation == BLUR_VERTICAL){
+        	setRootViewId(R.layout.popup_blur_vertical);
         } else {
-            setRootViewId(R.layout.popup_vertical);
+        	setRootViewId(R.layout.popup_vertical);
         }
 
         mAnimStyle 	= ANIM_AUTO;
@@ -346,13 +349,13 @@ public class QuickAction extends PopupWindows implements OnDismissListener {
 
         final int arrowWidth = mArrowUp.getMeasuredWidth();
 
-        showArrow.setVisibility(View.VISIBLE);
+//        showArrow.setVisibility(View.VISIBLE);
         
         ViewGroup.MarginLayoutParams param = (ViewGroup.MarginLayoutParams)showArrow.getLayoutParams();
        
         param.leftMargin = requestedX - arrowWidth / 2;
         
-        hideArrow.setVisibility(View.INVISIBLE);
+//        hideArrow.setVisibility(View.INVISIBLE);
     }
 	
 	/**
