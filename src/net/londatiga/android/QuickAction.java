@@ -345,7 +345,7 @@ public class QuickAction extends PopupWindows implements OnDismissListener {
 	 */
 	private void showArrow(int whichArrow, int requestedX) {
         final View showArrow = (whichArrow == R.id.arrow_up) ? mArrowUp : mArrowDown;
-        final View hideArrow = (whichArrow == R.id.arrow_up) ? mArrowDown : mArrowUp;
+//		final View hideArrow = (whichArrow == R.id.arrow_up) ? mArrowDown : mArrowUp;
 
         final int arrowWidth = mArrowUp.getMeasuredWidth();
 
